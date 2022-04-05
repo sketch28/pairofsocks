@@ -1,0 +1,25 @@
+var x = [1,1, 1, 2,2, 3, 7,7, 7, 4,4, 4,4, 4, 5,5, 5]
+
+
+var getPairOfSocks = function(data){
+  
+  x = x.sort();
+
+  var pair_of_socks = 0;
+ 
+  for( let index = 0; index<x.length-1; index++ ){
+  
+    if(data[index] == data[index+1]){
+      pair_of_socks += 1;
+      index++
+    }
+       
+  }
+  
+  
+  return pair_of_socks;
+ 
+}
+
+
+console.log(getPairOfSocks(x))
